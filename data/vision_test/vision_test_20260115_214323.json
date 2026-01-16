@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-01-15T21:42:46.045897",
+  "mode": "sequential",
+  "color_detection": {
+    "timestamp": 19560.088360721,
+    "tube_count": 4,
+    "results": [
+      {
+        "tube_id": 1,
+        "test": "xanthophyll",
+        "color": "#383837",
+        "rgb": [
+          56,
+          56,
+          55
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 2,
+        "test": "ethidium_bromide",
+        "color": "#363635",
+        "rgb": [
+          54,
+          54,
+          53
+        ],
+        "result": "no_fluorescence",
+        "confidence": 0.23
+      },
+      {
+        "tube_id": 3,
+        "test": "labile_carbon",
+        "color": "#232220",
+        "rgb": [
+          35,
+          34,
+          32
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 4,
+        "test": "buret_test",
+        "color": "#21201E",
+        "rgb": [
+          33,
+          32,
+          30
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Alluvial Soil",
+      "confidence": 1.0,
+      "all_predictions": {
+        "Alluvial Soil": 1.0,
+        "Black Soil": 0.0,
+        "Cinder Soil": 0.0,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.0,
+        "Yellow Soil": 0.0
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_214259.jpg"
+  },
+  "panorama": {
+    "success": true,
+    "image_path": "./data/vision_test/site0_servo_panorama_20260115_214323.jpg",
+    "frames_captured": 12,
+    "angles": [
+      0.0,
+      16.363636363636363,
+      32.72727272727273,
+      49.09090909090909,
+      65.45454545454545,
+      81.81818181818181,
+      98.18181818181819,
+      114.54545454545455,
+      130.9090909090909,
+      147.27272727272728,
+      163.63636363636363,
+      180.0
+    ]
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "timestamp": "2026-01-16T18:09:43.075534",
+  "mode": "sequential",
+  "color_detection": {
+    "timestamp": 93.796586176,
+    "tube_count": 4,
+    "results": [
+      {
+        "tube_id": 1,
+        "test": "xanthophyll",
+        "color": "#60A682",
+        "rgb": [
+          96,
+          166,
+          130
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 2,
+        "test": "ethidium_bromide",
+        "color": "#161918",
+        "rgb": [
+          22,
+          25,
+          24
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 3,
+        "test": "labile_carbon",
+        "color": "#6EBA8F",
+        "rgb": [
+          110,
+          186,
+          143
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 4,
+        "test": "buret_test",
+        "color": "#19201E",
+        "rgb": [
+          25,
+          32,
+          30
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.653,
+      "all_predictions": {
+        "Alluvial Soil": 0.003,
+        "Black Soil": 0.339,
+        "Cinder Soil": 0.001,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.004,
+        "Yellow Soil": 0.653
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260116_181002.jpg"
+  },
+  "panorama": {
+    "error": "Camera/Servo init failed",
+    "camera": 0
+  }
+}

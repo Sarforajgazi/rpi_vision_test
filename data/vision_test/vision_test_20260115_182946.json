@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-01-15T18:29:23.927281",
+  "mode": "sequential",
+  "color_detection": {
+    "error": "Failed to capture frame",
+    "results": []
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Peat Soil",
+      "confidence": 0.827,
+      "all_predictions": {
+        "Alluvial Soil": 0.0,
+        "Black Soil": 0.171,
+        "Cinder Soil": 0.0,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.827,
+        "Red Soil": 0.002,
+        "Yellow Soil": 0.0
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "Kuarsa",
+      "confidence": 0.686,
+      "detections": {
+        "Kuarsa": 2
+      },
+      "detection_count": 2,
+      "is_confident": true,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_182936.jpg"
+  },
+  "panorama": {
+    "success": false,
+    "error": "Stitching failed"
+  }
+}

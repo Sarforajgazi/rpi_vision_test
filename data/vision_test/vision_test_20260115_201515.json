@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-01-15T20:14:39.361337",
+  "mode": "sequential",
+  "color_detection": {
+    "timestamp": 14272.081180317,
+    "tube_count": 4,
+    "results": [
+      {
+        "tube_id": 1,
+        "test": "xanthophyll",
+        "color": "#2B2626",
+        "rgb": [
+          43,
+          38,
+          38
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 2,
+        "test": "ethidium_bromide",
+        "color": "#2B2727",
+        "rgb": [
+          43,
+          39,
+          39
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 3,
+        "test": "labile_carbon",
+        "color": "#282324",
+        "rgb": [
+          40,
+          35,
+          36
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 4,
+        "test": "buret_test",
+        "color": "#322E2E",
+        "rgb": [
+          50,
+          46,
+          46
+        ],
+        "result": "no_reaction",
+        "confidence": 0.03
+      }
+    ]
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.721,
+      "all_predictions": {
+        "Alluvial Soil": 0.004,
+        "Black Soil": 0.273,
+        "Cinder Soil": 0.0,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.001,
+        "Yellow Soil": 0.721
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_201451.jpg"
+  },
+  "panorama": {
+    "success": true,
+    "image_path": "./data/vision_test/site0_servo_panorama_20260115_201515.jpg",
+    "frames_captured": 12,
+    "angles": [
+      0.0,
+      16.363636363636363,
+      32.72727272727273,
+      49.09090909090909,
+      65.45454545454545,
+      81.81818181818181,
+      98.18181818181819,
+      114.54545454545455,
+      130.9090909090909,
+      147.27272727272728,
+      163.63636363636363,
+      180.0
+    ]
+  }
+}

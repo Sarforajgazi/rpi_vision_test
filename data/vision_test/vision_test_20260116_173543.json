@@ -1,0 +1,102 @@
+{
+  "timestamp": "2026-01-16T17:35:06.049680",
+  "mode": "sequential",
+  "color_detection": {
+    "timestamp": 6854.526393196,
+    "tube_count": 4,
+    "results": [
+      {
+        "tube_id": 1,
+        "test": "xanthophyll",
+        "color": "#2F2D2B",
+        "rgb": [
+          47,
+          45,
+          43
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 2,
+        "test": "ethidium_bromide",
+        "color": "#262323",
+        "rgb": [
+          38,
+          35,
+          35
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 3,
+        "test": "labile_carbon",
+        "color": "#272323",
+        "rgb": [
+          39,
+          35,
+          35
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 4,
+        "test": "buret_test",
+        "color": "#292727",
+        "rgb": [
+          41,
+          39,
+          39
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.769,
+      "all_predictions": {
+        "Alluvial Soil": 0.003,
+        "Black Soil": 0.226,
+        "Cinder Soil": 0.0,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.001,
+        "Yellow Soil": 0.769
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260116_173526.jpg"
+  },
+  "panorama": {
+    "success": true,
+    "image_path": "./data/vision_test/site0_servo_panorama_20260116_173543.jpg",
+    "frames_captured": 12,
+    "angles": [
+      0,
+      16.0,
+      32.0,
+      48.0,
+      64.0,
+      80.0,
+      96.0,
+      112.0,
+      128.0,
+      144.0,
+      160.0,
+      176.0
+    ]
+  }
+}

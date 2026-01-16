@@ -1,0 +1,76 @@
+# RPi Vision Test Configuration
+# ==============================
+
+# Camera devices - Updated based on your RPi detection
+cameras:
+  endoscopic:
+    device: 2                    # Camera 2 for test tube color detection
+    resolution: [1280, 720]
+  microscopic:
+    device: 4                    # Camera 4 for soil/rock classification
+    resolution: [1280, 720]
+  panorama:
+    device: 0                    # Camera 0 for 180° panorama
+    resolution: [1280, 720]
+    capture_limit: 8             # Number of frames for panorama
+    interval: 3                  # Seconds between captures
+
+# Servo configuration for panorama rotation
+servo:
+  gpio_pin: 18                   # BCM pin number (GPIO 18 = physical pin 12)
+  num_positions: 12              # More positions = better overlap for stitching
+  stabilize_time: 1.0            # Seconds to wait after servo moves (longer = steadier)
+
+# Color detection settings
+color_detection:
+  # ROI for each test tube (x, y, width, height)
+  # IMPORTANT: Calibrate these using roi_calibrator.py first!
+  tube_rois:
+    - [100, 200, 80, 150]   # Tube 1
+    - [200, 200, 80, 150]   # Tube 2
+    - [300, 200, 80, 150]   # Tube 3
+    - [400, 200, 80, 150]   # Tube 4
+  
+  # Color-to-result mapping (HSV ranges)
+  test_mappings:
+    xanthophyll:
+      - { color_range: [[35, 80, 150], [55, 255, 255]], result: "pigment_detected" }
+      - { color_range: [[25, 50, 100], [35, 150, 255]], result: "trace_pigment" }
+      - { color_range: [[0, 0, 150], [180, 50, 255]], result: "no_pigment" }
+    ethidium_bromide:
+      - { color_range: [[10, 150, 150], [25, 255, 255]], result: "nucleic_acid_analog_present" }
+      - { color_range: [[0, 100, 100], [10, 255, 255]], result: "weak_fluorescence" }
+      - { color_range: [[0, 0, 50], [180, 100, 150]], result: "no_fluorescence" }
+    labile_carbon:
+      - { color_range: [[15, 100, 80], [30, 255, 180]], result: "high_organic_content" }
+      - { color_range: [[10, 50, 50], [35, 150, 150]], result: "medium_organic_content" }
+      - { color_range: [[0, 0, 100], [180, 50, 200]], result: "low_organic_content" }
+    buret_test:
+      - { color_range: [[100, 100, 150], [120, 255, 255]], result: "successful_titration" }
+      - { color_range: [[90, 50, 100], [130, 150, 200]], result: "partial_titration" }
+      - { color_range: [[0, 0, 50], [180, 50, 150]], result: "no_reaction" }
+
+# ML Classifiers
+classifiers:
+  soil:
+    model_path: "./models/soil_classifier"
+    confidence_threshold: 0.5
+    model_type: "yolo"
+    classes:
+      - "Alluvial Soil"
+      - "Black Soil"
+      - "Cinder Soil"
+      - "Clay Soil"
+      - "Laterite Soil"
+      - "Peat Soil"
+      - "Red Soil"
+      - "Yellow Soil"
+  
+  rock_micro:
+    model_path: "./models/rock_classifier_micro"
+    confidence_threshold: 0.3
+    model_type: "yolo"
+    classes:
+      - "Feldspar"
+      - "Kuarsa"
+      - "Litik"

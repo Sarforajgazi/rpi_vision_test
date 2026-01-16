@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-01-15T20:06:03.411043",
+  "mode": "sequential",
+  "color_detection": {
+    "error": "Failed to capture frame",
+    "results": []
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.646,
+      "all_predictions": {
+        "Alluvial Soil": 0.005,
+        "Black Soil": 0.347,
+        "Cinder Soil": 0.001,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.001,
+        "Yellow Soil": 0.646
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_200616.jpg"
+  },
+  "panorama": {
+    "error": "OpenCV(4.12.0) /io/opencv/modules/core/src/umatrix.cpp:710: error: (-215:Assertion failed) u != 0 in function 'create'\n"
+  }
+}

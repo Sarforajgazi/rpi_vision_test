@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-01-15T19:56:47.267498",
+  "mode": "sequential",
+  "color_detection": {
+    "error": "Failed to capture frame",
+    "results": []
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.735,
+      "all_predictions": {
+        "Alluvial Soil": 0.004,
+        "Black Soil": 0.259,
+        "Cinder Soil": 0.0,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.001,
+        "Yellow Soil": 0.735
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_195659.jpg"
+  },
+  "panorama": {
+    "success": true,
+    "image_path": "./data/vision_test/site0_servo_panorama_20260115_195723.jpg",
+    "frames_captured": 12,
+    "angles": [
+      0.0,
+      16.363636363636363,
+      32.72727272727273,
+      49.09090909090909,
+      65.45454545454545,
+      81.81818181818181,
+      98.18181818181819,
+      114.54545454545455,
+      130.9090909090909,
+      147.27272727272728,
+      163.63636363636363,
+      180.0
+    ]
+  }
+}

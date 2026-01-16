@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-01-15T18:01:41.483012",
+  "mode": "sequential",
+  "color_detection": {
+    "timestamp": 6294.482424844,
+    "tube_count": 4,
+    "results": [
+      {
+        "tube_id": 1,
+        "test": "xanthophyll",
+        "color": "#000100",
+        "rgb": [
+          0,
+          1,
+          0
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 2,
+        "test": "ethidium_bromide",
+        "color": "#000101",
+        "rgb": [
+          0,
+          1,
+          1
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 3,
+        "test": "labile_carbon",
+        "color": "#000202",
+        "rgb": [
+          0,
+          2,
+          2
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      },
+      {
+        "tube_id": 4,
+        "test": "buret_test",
+        "color": "#000101",
+        "rgb": [
+          0,
+          1,
+          1
+        ],
+        "result": "unknown",
+        "confidence": 0.0
+      }
+    ]
+  },
+  "sample_classification": {
+    "error": "Camera init failed",
+    "camera": 1
+  },
+  "panorama": {
+    "success": true,
+    "image_path": "./data/vision_test/site0_panorama_20260115_180208.jpg",
+    "frames_captured": 5
+  }
+}

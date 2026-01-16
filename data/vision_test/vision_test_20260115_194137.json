@@ -1,0 +1,36 @@
+{
+  "timestamp": "2026-01-15T19:41:04.398903",
+  "mode": "sequential",
+  "color_detection": {
+    "error": "Camera init failed",
+    "camera": 2
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.618,
+      "all_predictions": {
+        "Alluvial Soil": 0.004,
+        "Black Soil": 0.376,
+        "Cinder Soil": 0.001,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.001,
+        "Yellow Soil": 0.618
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_194116.jpg"
+  },
+  "panorama": {
+    "error": "OpenCV(4.12.0) /io/opencv/modules/flann/src/miniflann.cpp:521: error: (-215:Assertion failed) (size_t)knn <= index_->size() in function 'runKnnSearch_'\n"
+  }
+}

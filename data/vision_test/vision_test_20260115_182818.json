@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-01-15T18:27:54.577584",
+  "mode": "sequential",
+  "color_detection": {
+    "error": "Camera init failed",
+    "camera": 2
+  },
+  "sample_classification": {
+    "soil": {
+      "class": "Yellow Soil",
+      "confidence": 0.842,
+      "all_predictions": {
+        "Alluvial Soil": 0.003,
+        "Black Soil": 0.152,
+        "Cinder Soil": 0.001,
+        "Clay Soil": 0.0,
+        "Laterite Soil": 0.0,
+        "Peat Soil": 0.0,
+        "Red Soil": 0.003,
+        "Yellow Soil": 0.842
+      },
+      "is_confident": true,
+      "classifier": "soil"
+    },
+    "rock_micro": {
+      "class": "none_detected",
+      "confidence": 0.0,
+      "is_confident": false,
+      "classifier": "rock_micro"
+    },
+    "image_path": "./data/vision_test/microscopic_20260115_182806.jpg"
+  },
+  "panorama": {
+    "success": true,
+    "image_path": "./data/vision_test/site0_panorama_20260115_182818.jpg",
+    "frames_captured": 5
+  }
+}
