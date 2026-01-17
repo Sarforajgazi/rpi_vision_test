@@ -18,8 +18,9 @@ cameras:
 # Servo configuration for panorama rotation
 servo:
   gpio_pin: 18                   # BCM pin number (GPIO 18 = physical pin 12)
-  num_positions: 12              # More positions = better overlap for stitching
-  stabilize_time: 1.0            # Seconds to wait after servo moves (longer = steadier)
+  num_positions: 10              # More positions = better overlap for stitching
+  stabilize_time: 2.0            # Seconds to wait after servo moves (longer = steadier)
+  degree_step: 1                 # Degrees per step during smooth movement (1=smooth, 5=faster)
 
 # Color detection settings
 color_detection:

@@ -46,8 +46,9 @@ class ServoPanorama:
         
         # Servo settings
         self.servo_pin = config.get('servo_pin', 18)
-        self.num_positions = config.get('num_positions', 8)
+        self.num_positions = config.get('num_positions', 10)
         self.stabilize_time = config.get('stabilize_time', 0.5)  # Time to wait after servo moves
+        self.degree_step = config.get('degree_step', 1)  # Degrees per step for smooth movement
         
         # Stitching settings - lower threshold for better success rate
         self.confidence_thresh = config.get('confidence_threshold', 0.3)
@@ -130,7 +131,7 @@ class ServoPanorama:
         logger.info(f"Starting servo panorama: {self.num_positions} positions")
         
         # Move to start position (0°)
-        self.servo.set_angle(0, smooth=True)
+        self.servo.set_angle(0, smooth=True, degree_step=self.degree_step)
         time.sleep(0.5)
         
         # Capture at each position
@@ -138,7 +139,7 @@ class ServoPanorama:
             angle = i * step
             
             # Move servo to position
-            self.servo.set_angle(angle, smooth=True)
+            self.servo.set_angle(angle, smooth=True, degree_step=self.degree_step)
             time.sleep(self.stabilize_time)  # Wait for camera to stabilize
             
             # Capture frame
@@ -151,7 +152,7 @@ class ServoPanorama:
                 logger.warning(f"Failed to capture at {angle:.1f}°")
         
         # Return servo to start
-        self.servo.set_angle(0, smooth=True)
+        self.servo.set_angle(0, smooth=True, degree_step=self.degree_step)
         
         if len(self.frames) < 2:
             return ServoPanoramaResult(

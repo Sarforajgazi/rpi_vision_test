@@ -67,7 +67,7 @@ class ServoController:
         duty = self.min_duty + (angle / 180.0) * (self.max_duty - self.min_duty)
         return duty
     
-    def set_angle(self, angle: float, smooth: bool = True, step_delay: float = 0.02):
+    def set_angle(self, angle: float, smooth: bool = True, step_delay: float = 0.02, degree_step: int = 1):
         """
         Set servo to specific angle.
         
@@ -75,13 +75,14 @@ class ServoController:
             angle: Target angle (0-180 degrees)
             smooth: If True, move gradually. If False, move immediately.
             step_delay: Delay between steps for smooth movement (seconds)
+            degree_step: Degrees to move per step (1=smoothest, higher=faster)
         """
         angle = max(self.min_angle, min(self.max_angle, angle))
         
         if not GPIO_AVAILABLE:
             if smooth:
                 # Simulate smooth movement time
-                steps = abs(angle - self.current_angle)
+                steps = abs(angle - self.current_angle) / degree_step
                 time.sleep(steps * step_delay)
             self.current_angle = angle
             logger.debug(f"[SIM] Servo at {angle}°")
@@ -92,12 +93,13 @@ class ServoController:
             return
         
         if smooth:
-            # Move gradually
-            step = 1 if angle > self.current_angle else -1
+            # Move gradually with configurable step size
+            direction = 1 if angle > self.current_angle else -1
+            step = degree_step * direction
             current = int(self.current_angle)
             target = int(angle)
             
-            for a in range(current, target + step, step):
+            for a in range(current, target + direction, step):
                 duty = self._angle_to_duty(a)
                 self.pwm.ChangeDutyCycle(duty)
                 time.sleep(step_delay)
